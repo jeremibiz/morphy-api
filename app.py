@@ -10,8 +10,11 @@ def get_current_time():
     return jsonify(current_time)
 
 @app.route("/status")
-def hello():
-    return "ok"
+def status():
+    return jsonify(
+        message="Morphy-API is alive.",
+        status=200
+    )
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
