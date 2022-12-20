@@ -1,3 +1,4 @@
+# compose_flask/app.py
 from flask import Flask, jsonify
 from datetime import datetime
 
@@ -11,3 +12,6 @@ def get_current_time():
 @app.route("/status")
 def hello():
     return "ok"
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", debug=True)
