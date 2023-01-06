@@ -7,15 +7,10 @@ import tensorflow as tf
 app = Flask(__name__)
 CORS(app, origins=['http://morphy.fr.to', 'https://morphy.fr.to'])
 
-# Charger le modèle de deep learning pré-entraîné
 model = tf.keras.models.load_model('inclusive-writing-model.h5')
 
-# Définir la fonction de conversion de texte en écriture inclusive
 def convert_text_to_inclusive_writing(input_text):
-    # Prédire la sortie en utilisant le modèle de deep learning
     prediction = model.predict(input_text)
-
-    # Convertir la prédiction en texte et renvoyer le résultat
     return prediction_to_text(prediction)
 
 
