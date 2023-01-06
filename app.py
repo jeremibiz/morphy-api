@@ -20,13 +20,13 @@ def status():
 
 @app.route("/submit", methods=['POST'])
 def submit():
-  # Récupère la valeur de la clé "text" du corps de la requête
-  text = request.form['text']
+    # Récupère la valeur de la clé "text" du corps de la requête
+    text = request.form['text']
 
-  # Traite les données de la manière souhaitée...
+    # Traite les données de la manière souhaitée...
 
-  # Renvoie une réponse au client
-  return "Merci pour votre soumission : " + text
+    # Renvoie une réponse au client
+    return "Merci pour votre soumission : " + text
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
